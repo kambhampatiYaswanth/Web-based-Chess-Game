@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Game - Login</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            background: #1f1f35;
+            padding: 40px;
+            border-radius: 12px;
+            width: 320px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #4CAF50;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+        }
+
+        button:hover {
+            background: #43a047;
+        }
+
+        .link {
+            margin-top: 15px;
+        }
+
+        .link a {
+            color: #90caf9;
+            text-decoration: none;
+        }
+
+        .admin {
+            margin-top: 25px;
+        }
+
+        .admin a {
+            display: inline-block;
+            padding: 8px 14px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .admin a:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>♟ Chess Game</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Register -->
+    <div class="link">
+        <a href="{% url 'register' %}">Create new account</a>
+    </div>
+
+    <!-- Admin -->
+    <div class="admin">
+        <a href="/admin/">Admin Panel</a>
+    </div>
+</div>
+
+</body>
+</html>

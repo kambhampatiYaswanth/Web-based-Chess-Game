@@ -1,0 +1,29 @@
+# Create .gitignore file
+echo "# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Database
+*.sqlite3
+*.db
+
+# Django secret key
+secrets.py
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
+ENV/" > .gitignore
